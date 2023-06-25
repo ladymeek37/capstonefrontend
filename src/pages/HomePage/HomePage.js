@@ -2,11 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
-import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
-import CommentsSection from "../../components/CommentSection/CommentsSection";
+// import { useLocation } from "react-router-dom";
+// import FavoriteButton from "../../components/FavoriteButton/FavoriteButton";
+// import CommentsSection from "../../components/CommentSection/CommentsSection";
 import TipSection from "../../components/TipSection/TipSection";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { URL_HOST } from "../../urlHost";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)

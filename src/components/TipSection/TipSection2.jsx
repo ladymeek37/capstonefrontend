@@ -6,7 +6,8 @@ import FavoriteButton from '../FavoriteButton/FavoriteButton';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import "./TipSection.css"
+import "./TipSection.css";
+import { URL_HOST } from '../../urlHost';
 
 
 const TipSectionTwo = () => {
@@ -20,7 +21,7 @@ const TipSectionTwo = () => {
 
       async function fetchTipsOne (event) {
         try {
-          let response = await axios.get('http://127.0.0.1:8000/api/tips/by_category?category=2')
+          let response = await axios.get(`${URL_HOST}/api/tips/by_category?category=2`)
           setTips(response.data);
         } catch (error) {
           console.log(error.response.data)

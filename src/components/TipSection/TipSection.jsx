@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import "./TipSection.css"
+import { URL_HOST } from '../../urlHost';
 
 
 const TipSection = (props) => {
@@ -24,7 +25,7 @@ const TipSection = (props) => {
 
     const fetchTips = async () => {
         try {
-          let response = await axios.get("http://127.0.0.1:8000/api/tips/all/"
+          let response = await axios.get(`${URL_HOST}/api/tips/all/`
           );
           setTips(response.data);
           console.log(response.data)
