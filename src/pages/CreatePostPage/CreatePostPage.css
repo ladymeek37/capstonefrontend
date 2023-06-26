@@ -1,10 +1,9 @@
 .pageparent{
-    padding:70px;
     text-align: left;
     color: rgb(85, 84, 84);
     letter-spacing: 1px;
-    padding-right: 313px;
-    padding-left: 313px;
+    padding: 70px 15%
+
 }
 
 .newposttext{

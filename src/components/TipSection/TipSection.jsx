@@ -77,7 +77,7 @@ const TipSection = (props) => {
                           <div className='tipbody'>
                             <h1 className='item'>{tip.title}</h1> 
                             <h4 className='item'>{tip.category_display} </h4>
-                            {tip.image_url ? <img className='item'src = {`http://127.0.0.1:8000${tip.image_url}`} alt={``}/> : null}
+                            {tip.image_url ? <img className='item'src = {`${URL_HOST}${tip.image_url}`} alt={``}/> : null}
                             <p className='item'>{tip.text} </p>
                             <a className='item' href={tip.link} target="_blank">{tip.link}</a>                            
                           </div>
