@@ -3,6 +3,7 @@ import axios from 'axios';
 import CommentsList from './CommentsList';
 import CommentForm from './CommentForm';
 import "./Comments.css"
+import { URL_HOST } from '../../urlHost';
 
 const CommentsSection = ({tipId}) => {
     const [comments, setComments] = useState([])
@@ -10,7 +11,7 @@ const CommentsSection = ({tipId}) => {
     const getCommentsByTipId = async() => {
         try{
             await axios
-            .get(`http://127.0.0.1:8000/api/comments/${tipId}/`)
+            .get(`${URL_HOST}api/comments/${tipId}/`)
             .then(response => {setComments(response.data);console.log(response.data)})
         } catch (error){
             console.log(error.response.data)

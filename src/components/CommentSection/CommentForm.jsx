@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useAuth from "../../hooks/useAuth"
 import axios from 'axios';
 import './Comments.css'
+import { URL_HOST } from '../../urlHost';
 
 const CommentForm = ({tip, getCommentsByTipId}) => {
     const [user, token] = useAuth();
@@ -19,7 +20,7 @@ const CommentForm = ({tip, getCommentsByTipId}) => {
 
     async function sendComment(newComment){
         try{
-            await axios.post('http://127.0.0.1:8000/api/comments/newcomment/', newComment, {
+            await axios.post(`${URL_HOST}/api/comments/newcomment/`, newComment, {
                 headers: {
                     Authorization: "Bearer " + token
                 }

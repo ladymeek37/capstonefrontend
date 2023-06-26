@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import "./EditPost.css"
+import { URL_HOST } from "../../urlHost";
 
 const EditPostPage = () => {
     
@@ -30,7 +31,7 @@ const EditPostPage = () => {
 
     async function getTip() {
         try{ 
-            let response = await axios.get(`http://127.0.0.1:8000/api/tips/by_id/${tipId}/`, {
+            let response = await axios.get(`${URL_HOST}/api/tips/by_id/${tipId}/`, {
                 headers: {
                     Authorization: "Bearer " + token,
             },
@@ -76,7 +77,7 @@ const EditPostPage = () => {
     async function editTip(tip) {
 
         try{
-            let response = await axios.put(`http://127.0.0.1:8000/api/tips/${tipId}/`, tip, {
+            let response = await axios.put(`${URL_HOST}/api/tips/${tipId}/`, tip, {
                 headers: {
                     Authorization: "Bearer " + token,
                     "Content-Type": "multipart/form-data", // Add this in to indicate that we are sending in data with files.

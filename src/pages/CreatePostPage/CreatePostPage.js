@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./CreatePostPage.css"
+import { URL_HOST } from "../../urlHost";
 
 const CreatePostPage = (props) => {
     const [category, setCategory] = useState('');
@@ -39,7 +40,7 @@ const CreatePostPage = (props) => {
     async function sendPost(newPost) {
 
         try{
-            let response = await axios.post('http://127.0.0.1:8000/api/tips/', newPost, {
+            let response = await axios.post(`${URL_HOST}/api/tips/`, newPost, {
                 headers: {
                 Authorization: "Bearer " + token,
                 "Content-Type": "multipart/form-data",

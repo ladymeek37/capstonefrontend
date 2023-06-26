@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import "./FavoriteTipsPage.css"
+import { URL_HOST } from "../../urlHost";
 
 const FavoriteTipsPage = () => {
 
@@ -16,7 +17,7 @@ const FavoriteTipsPage = () => {
 
         const fetchFavoriteTips = async () => {
             try {
-                let response = await axios.get("http://127.0.0.1:8000/api/favorites/", {
+                let response = await axios.get(`${URL_HOST}/api/favorites/`, {
                     headers: {
                         Authorization: "Bearer " + token,
                     },
@@ -46,7 +47,7 @@ const FavoriteTipsPage = () => {
 
                         <h1>{tip.tip.title}</h1> 
                         <p>{tip.category_display} </p>
-                        {tip.tip.image_url ? <img src = {`http://127.0.0.1:8000${tip.tip.image_url}`} />: null}
+                        {tip.tip.image_url ? <img src = {`${URL_HOST}${tip.tip.image_url}`} />: null}
                         <p className="favitem">{tip.tip.text} </p>
                         <a className="favitem" href={tip.tip.link} target="_blank">{tip.tip.link}</a>
                       </div>

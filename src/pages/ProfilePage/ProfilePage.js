@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "./ProfilePage.css"
 
 import axios from "axios";
+import { URL_HOST } from "../../urlHost";
 
 const ProfilePage = () => {
 
@@ -18,7 +19,7 @@ const ProfilePage = () => {
 
         const fetchUserTips = async () => {
         try {
-          let response = await axios.get("http://127.0.0.1:8000/api/tips/", {
+          let response = await axios.get(`${URL_HOST}/api/tips/`, {
             headers: {
                 Authorization: "Bearer " + token,
             },
@@ -34,7 +35,7 @@ const ProfilePage = () => {
       async function deleteTip(tip) {
 
         try{
-            let response = await axios.delete(`http://127.0.0.1:8000/api/tips/${tip.id}/`, {
+            let response = await axios.delete(`${URL_HOST}/api/tips/${tip.id}/`, {
                 headers: {
                 Authorization: "Bearer " + token,
             }, 
@@ -80,7 +81,7 @@ const ProfilePage = () => {
 
                         <h1>{tip.title}</h1> 
                         <h4 className="profilecategory">{tip.category_display} </h4>
-                        {tip.image_url ? <img className='item'src = {`http://127.0.0.1:8000${tip.image_url}`} alt={``}/> : null} 
+                        {tip.image_url ? <img className='item'src = {`${URL_HOST}${tip.image_url}`} alt={``}/> : null} 
                         <p className="favitem">{tip.text} </p>
                         <a className="favitem" href={tip.link} target="_blank">{tip.link}</a>
                       </div>

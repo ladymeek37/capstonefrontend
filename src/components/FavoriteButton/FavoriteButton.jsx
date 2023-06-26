@@ -3,6 +3,7 @@ import useAuth from "../../hooks/useAuth";
 import axios from 'axios';
 import { GrFavorite } from 'react-icons/gr';
 import "./FavoriteButton.css"
+import { URL_HOST } from '../../urlHost';
 
 
 const FavoriteButton = (props) => {
@@ -22,7 +23,7 @@ const FavoriteButton = (props) => {
     async function updateFavoriteCount(tipId) {
         try{
             console.log("Updating favorite count...")
-            let response = await axios.patch(`http://127.0.0.1:8000/api/tips/favorite/${tipId}/`,
+            let response = await axios.patch(`${URL_HOST}/tips/favorite/${tipId}/`,
             {},
             {
                 headers: {
@@ -39,7 +40,7 @@ const FavoriteButton = (props) => {
     async function addToFavorites() {
         await updateFavoriteCount(props.tipId);
         try{
-            let response = await axios.post('http://127.0.0.1:8000/api/favorites/addfavorite/', 
+            let response = await axios.post(`${URL_HOST}/favorites/addfavorite/`, 
             {
                 tip_id: props.tipId
             },
