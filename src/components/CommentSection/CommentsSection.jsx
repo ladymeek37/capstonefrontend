@@ -11,7 +11,7 @@ const CommentsSection = ({tipId}) => {
     const getCommentsByTipId = async() => {
         try{
             await axios
-            .get(`${URL_HOST}api/comments/${tipId}/`)
+            .get(`${URL_HOST}/api/comments/${tipId}/`)
             .then(response => {setComments(response.data);console.log(response.data)})
         } catch (error){
             console.log(error.response.data)
