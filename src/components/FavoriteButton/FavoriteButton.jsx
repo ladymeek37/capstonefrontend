@@ -23,7 +23,7 @@ const FavoriteButton = (props) => {
     async function updateFavoriteCount(tipId) {
         try{
             console.log("Updating favorite count...")
-            let response = await axios.patch(`${URL_HOST}/tips/favorite/${tipId}/`,
+            let response = await axios.patch(`${URL_HOST}/api/tips/favorite/${tipId}/`,
             {},
             {
                 headers: {
@@ -40,7 +40,7 @@ const FavoriteButton = (props) => {
     async function addToFavorites() {
         await updateFavoriteCount(props.tipId);
         try{
-            let response = await axios.post(`${URL_HOST}/favorites/addfavorite/`, 
+            let response = await axios.post(`${URL_HOST}/api/favorites/addfavorite/`, 
             {
                 tip_id: props.tipId
             },
