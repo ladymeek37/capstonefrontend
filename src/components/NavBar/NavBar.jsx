@@ -8,8 +8,12 @@ const Navbar = () => {
   const { logoutUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
   return (
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+    <body>
     <div className="navBar">
-
       <ul>
         <div>
           <li className="brand">
@@ -42,8 +46,10 @@ const Navbar = () => {
           </ul>          
         </div>
       </ul>
-    </div>
-  );
+    </div>        
+    </body>  
+    </html>
+      );
 };
 
 export default Navbar;
