@@ -36,7 +36,8 @@ const TipSection = (props) => {
 
 
     return ( 
-                <div className="container parent">
+          <body>
+               <div className="container parent">
                 <div className='titlecontainer'>
                   <h1 >All Tips:</h1>                  
                 </div>          
@@ -94,7 +95,9 @@ const TipSection = (props) => {
                 ).reverse()}  
                 </div>
 
-            </div>
+            </div>            
+          </body>
+ 
           );
   
 }

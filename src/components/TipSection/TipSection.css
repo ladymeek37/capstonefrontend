@@ -1,4 +1,13 @@
 
+@media only screen
+  and (max-device-width: 768px)
+  and (orientation: portrait) {
+    .container{
+        margin-left: 4%;
+        margin-right: 4%;
+        padding: 4%;
+    }
+}
 .container{
     display: flex;
     flex-flow: row wrap;
