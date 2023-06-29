@@ -52,6 +52,7 @@ const TipSectionThree = () => {
             <button>All</button> 
         </Link>
     </div>
+    <h4 className='titlecontainer'>Click the heart to add something to your favorites!</h4>
 
                 {tips &&
                   tips.map((tip) => {

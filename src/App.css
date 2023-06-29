@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
 @media only screen
-  and (max-device-width: 414px)
+  and (max-device-width: 768px)
   and (orientation: portrait) {
-  /* CSS styles for iPhone portrait mode */
+    body{
+      zoom:50%;
+    }
 }
 
 *,

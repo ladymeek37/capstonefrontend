@@ -58,7 +58,7 @@ const TipSection = (props) => {
                       <button className='filterbutton'>All</button> 
                   </Link>
               </div>
-
+              <h4 className='titlecontainer'>Click the heart to add something to your favorites!</h4>
                 <div>
                 {tips &&
                   tips.map((tip) => {
