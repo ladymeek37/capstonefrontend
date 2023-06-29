@@ -37,6 +37,9 @@ const TipSection = (props) => {
 
     return ( 
           <body>
+            <head>
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </head>
                <div className="container parent">
                 <div className='titlecontainer'>
                   <h1 >All Tips:</h1>                  
