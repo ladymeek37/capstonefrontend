@@ -1,27 +1,4 @@
 
-@media only screen
-  and (max-device-width: 768px)
-  and (orientation: portrait) {
-    .container{
-        margin:0;
-        padding: 0;
-        left: 0;
-        right: 0;
-        max-width: 768px;
-        min-width: 768px;
-        box-sizing: border-box;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        display:block;
-        flex-flow: none;
-
-    }
-    html,body{
-        overflow-x: hidden;
-    }
-}
 .container{
     display: flex;
     flex-flow: row wrap;
