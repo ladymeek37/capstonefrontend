@@ -36,11 +36,7 @@ const TipSection = (props) => {
 
 
     return ( 
-      <html>
-          <body>
-            <head>
-              <meta name="viewport" content="width=device-width, initial-scale=1" />
-            </head>
+      <div className='tipsectiongroup'>
                <div className="container parent">
                 <div className='titlecontainer'>
                   <h1 >All Tips:</h1>                  
@@ -100,8 +96,7 @@ const TipSection = (props) => {
                 </div>
 
             </div>            
-          </body>        
-      </html>
+          </div> 
 
  
           );

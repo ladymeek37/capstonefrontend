@@ -30,7 +30,8 @@ const TipSectionThree = () => {
 
 
     return ( 
-      <div className="container parent">
+      <div className = "tipsectiongroup">
+    <div className="container parent">
       <div className='titlecontainer'>
         <h1 >Lifestyle and Other:</h1>                  
       </div>          
@@ -87,6 +88,8 @@ const TipSectionThree = () => {
                 }
                 ).reverse()}
             </div>
+      </div>
+  
           );
   
 }

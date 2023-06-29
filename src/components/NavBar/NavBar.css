@@ -1,3 +1,13 @@
+@media only screen
+  and (max-device-width: 768px)
+  and (orientation: portrait) {
+    body{
+      zoom: 35%;
+    }
+    .container{
+      margin: 0;
+    }    
+  }
 
 ul {
   display: flex;
