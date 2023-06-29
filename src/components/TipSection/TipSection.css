@@ -6,6 +6,8 @@
         margin-left: 4%;
         margin-right: 4%;
         padding: 4%;
+        left: 0;
+        right: 0;
     }
 }
 .container{
