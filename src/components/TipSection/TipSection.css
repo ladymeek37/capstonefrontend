@@ -2,16 +2,14 @@
 @media only screen
   and (max-device-width: 768px)
   and (orientation: portrait) {
-    .container{
-        margin-left: 4%;
-        margin-right: 4%;
+    /* .container{
+        /* margin:0;
         padding: 4%;
         left: 0;
         right: 0;
         max-width: 768px;
         min-width: 768px;
-        box-sizing: border-box;
-    }
+        box-sizing: border-box; */
     html,body{
         overflow-x: hidden;
     }
