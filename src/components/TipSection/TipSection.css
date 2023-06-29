@@ -11,6 +11,9 @@
         max-width: 768px;
         min-width: 768px;
     }
+    html,body{
+        overflow-x: hidden;
+    }
 }
 .container{
     display: flex;
